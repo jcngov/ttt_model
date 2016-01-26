@@ -23,6 +23,7 @@
       width: 400px;
       height: 400px;
       border: 1px solid black;
+      margin: 0 auto;
     }
 
     div {
@@ -33,6 +34,10 @@
       width: 125px;
       height: 125px;
       border: 1px solid black;
+    }
+
+    button {
+      clear: both;
     }
   </style>
 </head>
@@ -47,14 +52,15 @@
           <tr><td></td><td></td><td></td></tr>
           <tr><td></td><td></td><td></td></tr>
         </tbody>
+      </table>
    </div>
 
    <div class="align-right">
-     <p>Turn: </p>
+     <span id="turn">Turn: </span>
    </div>
 
    <div class="align-right">
-     <span>Winner: </span>
+     <span id="winner">Winner: </span>
    </div>
 
     <button>RESTART</button>

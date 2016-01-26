@@ -78,5 +78,15 @@ var gameWon = function() {
 // 4. RENDER OUR VIEW
 
 var render = function() {
+  // Render Turn Counter Component
+  var turnEl = document.getElementById("turn");
+  turnEl.textContent = "Turn: " + currentPlayer;
 
+  // Render Winner Component
+  var winnerEl = document.getElementById("winner");
+  if (won = false) {
+    winnerEl.textContent = "Winner: ?";
+  } else {
+    winnerEl.textContent = "Winnr: " + currentPlayer;
+  }
 };
