@@ -1,7 +1,7 @@
 console.log("main.js loaded");
 // document.addEventListener("load", function()){
-// MODEL
 
+// DATA MODEL:
 var won = false;
 var currentPlayer = "X";
 var board = [
@@ -11,6 +11,22 @@ var board = [
 ];
 
 // 1. START THE GAME
+    // inputs:
+    //   - current player, board, won
+    // outputs:
+    //   - board is emptied, player is X, won is false
+
+var startGame = function() {
+// Don't need to write anything because using global variables; if not use parameters
+  won = false;
+  currentPlayer = "X";
+  var board = [
+   "", "", "",
+    "", "", "",
+    "", "", ""
+  ];
+};
+
 // 2. MOVE (CHANGES TURN)
         //inputs:
         //- whose turn it is,
@@ -41,7 +57,26 @@ var move = function(cellIndex) {
   }
 };
 // 3. WIN CONDITIONS
-var gameWon = function() {};
-// 4. RESET
+      // input:
+        // - board
+      // output:
+        // - true OR false
 
-// };
+        // if (same way as doing below)
+        //   Math.abs(board[0] + board[1] + board[2]) === 3 || ...
+var gameWon = function() {
+  if (
+     ((board[0] === currentPlayer) && (board[1] === currentPlayer) && (currentPlayer === board[2])) ||
+     ((board[3] === board[4]) && (board[3] === board[5]) && board[3] !== "") ||
+     ((board[6] === board[7]) && (board[6] === board[8]) && board[6] !== "")
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+// 4. RENDER OUR VIEW
+
+var render = function() {
+
+};
